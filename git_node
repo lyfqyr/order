@@ -1,0 +1,16 @@
+#temp solution for SSH local<>github.com
+>ssh-agent bash
+>ssh-add fgithub (keygen >private key)
+>ssh -T git@github.com
+....ok!
+
+#Permanent solution use config
+>vi ~/.ssh/config
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/fgithub
+
+>ssh -T git@github.com
+....ok!
+
